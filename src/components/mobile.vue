@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import Card from "./card.vue";
 import micro from "./icons.vue";
 import Duos from "../components/iconsduo.vue";
 import Trofeu from "../components/iconstrofeu.vue";
 import Forms from "../components/forms.vue";
-
-const modules = [Navigation, Pagination, Autoplay];
 const episode = "https://www.youtube.com/@redfoxtvoficial";
 const handleClick = (episode) => window.open(episode);
 </script>
@@ -55,30 +51,7 @@ const handleClick = (episode) => window.open(episode);
       </h2></span
     >
 
-    <div class="mobile-carousel">
-      <!-- <Swiper
-        :modules="modules"
-        :slides-per-view="1"
-        :space-between="25"
-        :navigation="true"
-        :autoplay="{ delay: 3000, disableOnInteraction: false }"
-        :loop="false"
-        :breakpoints="{
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 25,
-          },
-        }"
-      >
-        <SwiperSlide> -->
-
-      <!-- </SwiperSlide> -->
-      <!-- </Swiper> -->
-    </div>
-
-    <!-- <!-- <div class="desktop-cards"> -->
-    <Card />
-    <!-- </div> -->
+    <div class="mobile-carousel"><Card /></div>
   </div>
   <div class="section-info">
     <h3
@@ -109,6 +82,7 @@ const handleClick = (episode) => window.open(episode);
       <Duos />
       <Trofeu />
     </div>
+    <button style="margin-top: 1rem" class="btnst">Saiba Mais</button>
   </div>
   <div class="sectionLeads" style="display: flex; align-items: center">
     <Forms />
@@ -204,10 +178,8 @@ h1 {
   align-items: center;
 }
 
-/* Estilos para o carrossel */
 .mobile-carousel {
-  display: none;
-  width: 70%;
+  max-width: 100%;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -255,6 +227,24 @@ button {
   background-color: #b0b0b0;
 }
 
+.btnst {
+  background-color: red;
+  color: #fff;
+}
+
+.btnst {
+  background-color: #e40000;
+  color: #ffffff;
+}
+
+.btnst:hover {
+  background-color: darkred;
+}
+
+.btnst:hover {
+  background-color: #fd2b2b;
+}
+
 @media (max-width: 1023px) {
   .sectionLeads {
     flex-direction: column;
@@ -299,8 +289,8 @@ button {
   }
 
   .mobile-carousel {
-    display: block;
-    width: 80%;
+    display: flex;
+    max-width: 450px;
     align-items: center;
     justify-content: center;
   }
