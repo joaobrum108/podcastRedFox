@@ -5,6 +5,7 @@ import micro from "./icons.vue";
 import Duos from "../components/iconsduo.vue";
 import Trofeu from "../components/iconstrofeu.vue";
 import Forms from "../components/forms.vue";
+import { RouterLink } from "vue-router";
 const episode = "https://www.youtube.com/@redfoxtvoficial";
 const handleClick = (episode) => window.open(episode);
 </script>
@@ -82,7 +83,9 @@ const handleClick = (episode) => window.open(episode);
       <Duos />
       <Trofeu />
     </div>
-    <button style="margin-top: 1rem" class="btnst">Saiba Mais</button>
+    <button style="margin-top: 1rem" class="btnst">
+      <RouterLink to="/QuemSomos">Quem Somos</RouterLink>
+    </button>
   </div>
   <div class="sectionLeads" style="display: flex; align-items: center">
     <Forms />
