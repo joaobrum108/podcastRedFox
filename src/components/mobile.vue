@@ -84,7 +84,7 @@ const handleClick = (episode) => window.open(episode);
       <Trofeu />
     </div>
     <button style="margin-top: 1rem" class="btnst">
-      <RouterLink to="/QuemSomos">Quem Somos</RouterLink>
+      <RouterLink to="/about">Quem Somos</RouterLink>
     </button>
   </div>
   <div class="sectionLeads" style="display: flex; align-items: center">
