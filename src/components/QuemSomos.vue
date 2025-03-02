@@ -4,7 +4,7 @@ import Botao from './btn.vue';
 
 <template>
   <v-app>
-    <hero-section class="container">
+    <section class="container">
       <div class="conteudo-left">
         <div>
           <img src="../images/Nav.png" alt="Logo do Podcast">
@@ -21,7 +21,7 @@ import Botao from './btn.vue';
             </button>
         </div>
       </div>
-    </hero-section>
+    </section>
     <section class="infoBanner">
     </section>
     <div class="infobanner2">

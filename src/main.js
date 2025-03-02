@@ -5,7 +5,7 @@ import "./css/bulma.css";
 import App from "./App.vue";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
-import router from "./router";
+import router from "./router/router";
 
 const pinia = createPinia();
 const app = createApp(App);
