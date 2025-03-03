@@ -8,6 +8,13 @@ import Forms from "../components/forms.vue";
 import { RouterLink } from "vue-router";
 const episode = "https://www.youtube.com/@redfoxtvoficial";
 const handleClick = (episode) => window.open(episode);
+
+const handleClicked = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 </script>
 
 <template>
@@ -83,9 +90,11 @@ const handleClick = (episode) => window.open(episode);
       <Duos />
       <Trofeu />
     </div>
-    <button style="margin-top: 1rem" class="btnst">
-      <RouterLink to="/about">Quem Somos</RouterLink>
-    </button>
+    <div>
+      <RouterLink @click="handleClicked" to="/about" class="btnst">
+        Quem Somos
+      </RouterLink>
+    </div>
   </div>
   <div class="sectionLeads" style="display: flex; align-items: center">
     <Forms />
@@ -231,21 +240,21 @@ button {
 }
 
 .btnst {
+  display: inline-block;
+  margin-top: 1rem;
   background-color: red;
   color: #fff;
-}
-
-.btnst {
-  background-color: #e40000;
-  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .btnst:hover {
-  background-color: darkred;
-}
-
-.btnst:hover {
-  background-color: #fd2b2b;
+  background-color: #7a0720;
 }
 
 @media (max-width: 1023px) {

@@ -104,6 +104,9 @@ button {
 button:hover {
   background-color: #369f6e;
 }
+textarea {
+  resize: none;
+}
 
 @media screen and (max-width: 600px) {
   button {

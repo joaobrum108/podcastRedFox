@@ -48,6 +48,9 @@
   .infobanner2 h2 {
     font-size: 1.8rem;
   }
+  h3 {
+    font-size: 0.9rem !important;
+  }
 
   .infobanner2 p {
     font-size: 1rem;
