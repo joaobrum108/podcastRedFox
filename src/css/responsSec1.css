@@ -1,0 +1,100 @@
+@media (max-width: 1024px) {
+  .container {
+    display: flex;
+    max-width: 100% !important;
+  }
+  h1,
+  h2 {
+    font-size: 28px !important;
+  }
+  p {
+    font-size: 16px !important;
+  }
+  img {
+    max-width: 80% !important;
+  }
+  .infobanner2 {
+    display: flex !important;
+    flex-direction: column;
+    max-height: 1000px;
+  }
+  .carrosel,
+  p1,
+  img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+  .infoFormulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    height: 35% !important;
+  }
+  .forms2 {
+    width: 60% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .infobanner2 {
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .infobanner2 h2 {
+    font-size: 1.8rem;
+  }
+
+  .infobanner2 p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .carrosel {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+  }
+
+  .p1 {
+    align-self: center !important;
+  }
+
+  .p1 img {
+    max-width: 90% !important;
+    height: auto;
+  }
+
+  .custom-button2 {
+    width: 100%;
+    max-width: 250px;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+.custom-button3 {
+  color: #fff;
+  border-radius: 5px;
+  background-color: #d40d35;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.custom-button3:hover {
+  background-color: #a00b2a;
+  transform: scale(1.05);
+}
+
+.custom-button3:active {
+  background-color: #800922;
+  transform: scale(0.95);
+}
