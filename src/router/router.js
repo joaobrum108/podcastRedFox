@@ -1,23 +1,35 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import mobile from '../components/mobile.vue';
-import QuemSomos from '../components/QuemSomos.vue';
+import { createRouter, createWebHistory } from "vue-router";
+import mobile from "../components/mobile.vue";
+import QuemSomos from "../components/QuemSomos.vue";
+import Home from "../components/home.vue";
+import intro from "../components/intro.vue";
+
 const routes = [
   {
-    path: '/',
-    name: 'mobile',
-    component: mobile
+    path: "/",
+    name: "indro",
+    component: intro,
   },
   {
-    path: '/about',
-    name: 'QuemSomos',
-    component: QuemSomos
-  }
- 
+    path: "/Home",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/Podcast",
+    name: "Mobile",
+    component: mobile,
+  },
+  {
+    path: "/quemsomos",
+    name: "QuemSomos",
+    component: QuemSomos,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 });
 
 export default router;

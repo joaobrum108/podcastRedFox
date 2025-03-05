@@ -6,18 +6,14 @@ import Duos from "../components/iconsduo.vue";
 import Trofeu from "../components/iconstrofeu.vue";
 import Forms from "../components/forms.vue";
 import { RouterLink } from "vue-router";
+// import Header from "./header.vue";
+
 const episode = "https://www.youtube.com/@redfoxtvoficial";
 const handleClick = (episode) => window.open(episode);
-
-const handleClicked = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
 </script>
 
 <template>
+  <!-- <Header /> -->
   <div class="container with-bg">
     <div
       class="box is-flex is-flex-direction-column is-mobile is-justify-content-center is-fullwidth"
@@ -89,11 +85,6 @@ const handleClicked = () => {
       <micro />
       <Duos />
       <Trofeu />
-    </div>
-    <div>
-      <RouterLink @click="handleClicked" to="/about" class="btnst">
-        Quem Somos
-      </RouterLink>
     </div>
   </div>
   <div class="sectionLeads" style="display: flex; align-items: center">
