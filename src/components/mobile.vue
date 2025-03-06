@@ -1,94 +1,38 @@
-<script setup lang="ts">
-import "swiper/swiper-bundle.css";
+<script setup lang="js">
 import Card from "./card.vue";
-import micro from "./icons.vue";
-import Duos from "../components/iconsduo.vue";
-import Trofeu from "../components/iconstrofeu.vue";
-import Forms from "../components/forms.vue";
-import { RouterLink } from "vue-router";
-// import Header from "./header.vue";
-
-const episode = "https://www.youtube.com/@redfoxtvoficial";
-const handleClick = (episode) => window.open(episode);
 </script>
 
 <template>
-  <!-- <Header /> -->
-  <div class="container with-bg">
-    <div
-      class="box is-flex is-flex-direction-column is-mobile is-justify-content-center is-fullwidth"
-    >
-      <div class="box2">
-        <v-chip style="background-color: red; font-family: sans-serif"
-          >RedFox TV Oficial</v-chip
-        >
+  <div class="Containermobile">
+    <div class="caixa-informacao">
+      <span>
+        <img src="../imagesHome/1.svg" alt="" />
+      </span>
+      <span class="text">
         <h1>
-          Histórias de Sucesso <br />
-          em Guarulhos
+          <span class="cors">Trajetórias</span> Reais, <br />
+          Conquistas Incríveis - <br />
+          Direto de <span class="cors">Guarulhos</span>
         </h1>
-        <p>Entrevistas irreverentes com os maiores empresários da região</p>
-        <div class="box2e3">
-          <button @click="handleClick(episode)" class="btns1">
-            <span class="material-icons" style="text-align: center"
-              >notifications</span
-            >
-            Inscreva-se no Canal
-          </button>
-          <button @click="handleClick(episode)" class="btns">
-            <span class="material-icons">play_arrow</span> Assista Agora
-          </button>
-        </div>
-      </div>
+      </span>
+      <span>
+        <button class="btn-ouca">
+          <i class="fas fa-headset"></i> OUÇA AGORA
+        </button>
+      </span>
     </div>
   </div>
-  <div
-    class="box3 is-flex is-flex-direction-column is-justify-content-center is-fullwidth"
-  >
-    <span style="text-align: center"
-      ><h2 style="font-family: sans-serif; font-weight: 900; font-size: 2rem">
-        Episódios em Destaque
-        <p style="font-family: sans-serif; font-size: 0.9rem; color: #808080">
-          Conheça as histórias inspiradoras dos empresários que estão
-          transformando Guarulhos e <br />
-          região
-        </p>
-      </h2></span
-    >
-
-    <div class="mobile-carousel"><Card /></div>
-  </div>
-  <div class="section-info">
-    <h3
-      style="
-        font-family: sans-serif;
-        font-weight: 900;
-        font-size: 2rem;
-        color: #000;
-      "
-    >
-      Sobre o RedFox TV
-      <p
-        style="
-          font-family: sans-serif;
-          font-size: 0.9rem;
-          color: #808080;
-          font-weight: 600;
-          padding: 0.5rem;
-        "
-      >
-        Um programa que une entretenimento e conteúdo de valor, apresentando as
-        histórias por trás dos maiores <br />
-        empresários de Guarulhos
-      </p>
-    </h3>
-    <div class="info2">
-      <micro />
-      <Duos />
-      <Trofeu />
+  <div class="containerBanner-Yt"></div>
+  <div class="ContainerCarrosel">
+    <div class="caixaDText">
+      <h1>
+        <span class="cors">Inspire-se </span>com Episódios que <br />
+        Estão Fazendo a <span class="cors">Diferença</span> !
+      </h1>
     </div>
-  </div>
-  <div class="sectionLeads" style="display: flex; align-items: center">
-    <Forms />
+    <div class="Carrosel">
+      <Card />
+    </div>
   </div>
 </template>
 
@@ -98,212 +42,95 @@ const handleClick = (episode) => window.open(episode);
   padding: 0;
   box-sizing: border-box;
 }
-
-.container.with-bg {
-  background-color: #272727;
-  padding: 20px;
-  width: 100%;
-  height: 70vh;
-  justify-content: center;
-  align-items: center;
-}
-
-chip {
-  background-color: red;
-  border-radius: 10px;
-  width: 120px;
-  display: flex;
-  justify-content: center;
-  height: 28px;
-  align-items: center;
-  color: #fff;
-  font-size: 12px;
-  font-family: sans-serif;
-}
-
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.box2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  gap: 15px;
-  color: #ddd;
-}
-
-.box2e3 {
-  display: flex;
-  flex-direction: row;
-  gap: 18px;
-}
-
-.box3 {
-  display: flex;
-  flex-direction: column;
-  min-height: 70vh;
-  background-color: #ddd;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  padding: 2rem;
-}
-
-h1 {
-  color: #ddd;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: clamp(2rem, 5vw, 4rem);
-}
-.section-info {
-  background-color: #f9fafb;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 40px;
-  height: 50vh;
-  width: 100%;
-}
-.info2 {
-  width: 100%;
-  padding-top: 80px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.mobile-carousel {
-  max-width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.desktop-cards {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-  margin-top: 1.5rem;
-}
-.sectionLeads {
-  background-color: #dddddd;
-  width: 100%;
-  height: 78vh;
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 15px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btns1 {
-  background-color: red;
-  color: #fff;
-}
-
-.btns {
-  background-color: #d3d3d3;
-  color: #000;
-}
-
-.btns1:hover {
-  background-color: darkred;
-}
-
-.btns:hover {
-  background-color: #b0b0b0;
-}
-
-.btnst {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: red;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 19px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.btnst:hover {
-  background-color: #7a0720;
-}
-
-@media (max-width: 1023px) {
-  .sectionLeads {
+@media (min-width: 375px) and (max-width: 728px) {
+  .Containermobile {
+    width: 100%;
+    height: 58vh;
+    background-image: url(../imagesHome/5.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    height: 100%;
+    gap: 5rem;
   }
-  .is-flex {
-    flex-direction: column;
-  }
-  .section-info {
+  .caixa-informacao {
+    width: 80%;
+    height: 39dvh;
     display: flex;
     flex-direction: column;
-    height: 100dvh;
+    align-items: right;
+    justify-content: center;
+    gap: 2rem;
   }
-  .info2 {
+
+  .text h1 {
+    font-size: 1.2rem !important;
+    font-family: "montserrat", sans-serif;
+    color: #fff;
+    align-items: right;
+    justify-content: right;
+  }
+  .cors {
+    color: #bf0b2f !important;
+  }
+  .btn-ouca {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 100dvh;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(45deg, #6e071c, #d40d35);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
   }
 
-  .box2 h1 {
-    flex-direction: column;
-    font-size: 3rem;
+  .btn-ouca:hover {
+    opacity: 0.8;
   }
-
-  .btns {
-    padding: 8px 16px;
-    font-size: 14px;
-    width: auto;
+  .btn-ouca i {
+    font-size: 1.2rem;
   }
-
-  .btns1 {
-    padding: 8px 16px;
-    font-size: 14px;
-    width: auto;
+  .containerBanner-Yt {
+    width: 100%;
+    height: 8dvh;
+    background-image: url(../imagesHome/rt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
-
-  .box3 {
+  .ContainerCarrosel {
+    width: 100vw;
+    height: 50vh;
+    background-color: #131313;
+  }
+  .caixaDText {
+    width: 100%;
+    height: 20vh;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .mobile-carousel {
-    display: flex;
-    max-width: 450px;
     align-items: center;
     justify-content: center;
   }
-
-  .desktop-cards {
-    display: none;
+  .caixaDText h1 {
+    font-size: 1.5rem !important;
+    font-family: "montserrat", sans-serif;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
+  .Carrosel {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>
